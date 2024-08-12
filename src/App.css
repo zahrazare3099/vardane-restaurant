@@ -1,0 +1,17 @@
+.wrapper {
+  min-height: 100vh;
+}
+.image__placeholder {
+  height: 220px;
+  animation: image__loader 1s linear infinite alternate;
+  overflow-y: scroll;
+}
+
+@keyframes image__loader {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
