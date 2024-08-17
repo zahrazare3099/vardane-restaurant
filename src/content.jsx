@@ -1,6 +1,7 @@
-import FastfoodItems from "./FastfoodLists/fastfoodItems";
+import FastfoodItem from "./FastfoodLists/fastfoodItem";
 
 const Content = ({ fastfoodItems }) => {
+  let delay = 0.3;
   if (!Boolean(fastfoodItems.length)) {
     return (
       <div className="w-full flex flex-col items-center py-2 gap-y-2">
@@ -16,9 +17,12 @@ const Content = ({ fastfoodItems }) => {
     );
   }
   return (
-    <>
-      <FastfoodItems fastfoodItems={fastfoodItems} />
-    </>
+    <div className="w-full mt-60 px-20 my-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+      {fastfoodItems.map((food) => {
+        delay += 0.031;
+        return <FastfoodItem key={food.id} {...food} delay={delay} />;
+      })}
+    </div>
   );
 };
 
