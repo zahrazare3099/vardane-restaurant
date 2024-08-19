@@ -4,7 +4,7 @@ const Content = ({ fastfoodItems }) => {
   let delay = 0.3;
   if (!Boolean(fastfoodItems.length)) {
     return (
-      <div className="w-full flex flex-col items-center py-2 gap-y-2">
+      <div className="w-full mt-60 flex flex-col items-center py-2 gap-y-2">
         <div className="pt-8 text-xl font-bold text-center text-purple-600">
           موردی یافت نشد
         </div>
